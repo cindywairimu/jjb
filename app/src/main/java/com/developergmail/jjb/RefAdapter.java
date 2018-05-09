@@ -8,35 +8,35 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.sql.Ref;
+//import java.sql.Ref;
 import java.util.ArrayList;
 
-class RefAdapter extends RecyclerView.Adapter {
+class RefAdapter extends RecyclerView.Adapter<RefAdapter.Viewholder> {
     
     ArrayList<Ref>Reflist;
     
-    public RefAdapter(ArrayList<Ref> reflist, Referees_List referees_list) {
-        this.Reflist=Reflist;
+    public RefAdapter(ArrayList<Ref> reflist) {
+        this.Reflist=reflist;
     }
+
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View myview= LayoutInflater.from(parent.getContext()).inflate(R.layout.ref_list_row,parent,));
+    public Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View myview= LayoutInflater.from(parent.getContext()).inflate(R.layout.ref_list_row,parent);
 
-        return new ViewHolder(myview); 
+        return new Viewholder(myview); 
         
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        int i;
-        i=0;
-        holder.textView1.setText(Reflist.get(i).getFirstname());
-        holder.textView2.setText(Reflist.get(i).getLastname());
-        
+    public void onBindViewHolder(@NonNull Viewholder holder, int position) {
+        holder.textView1.setText(Reflist.get(position).getFirstname());
+        holder.textView2.setText(Reflist.get(position).getLastname());
 
     }
+
+ 
 
     @Override
     public int getItemCount() {

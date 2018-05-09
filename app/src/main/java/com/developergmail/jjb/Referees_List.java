@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
 
 import java.io.OptionalDataException;
-import java.sql.Ref;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
@@ -26,7 +26,7 @@ public class Referees_List extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager= new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         ArrayList<Ref>Reflist=prepareDate();
-        RefAdapter adapter= new RefAdapter(Reflist,this);
+        RefAdapter adapter= new RefAdapter(Reflist);
         recyclerView.setAdapter(adapter);
         recyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
             @Override
