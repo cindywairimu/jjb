@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/idItem1"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home"/>
+        <item
+            android:id="@+id/idItem2"
+            android:icon="@drawable/ic_email_black_24dp"
+            android:title="Email"/>
+        <item
+            android:id="@+id/idItem3"
+            android:icon="@drawable/ic_person_outline_black_24dp"
+            android:title="Profile"/>
+        <item
+            android:id="@+id/idItem4"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home"/>
+        <item
+            android:id="@+id/idItem5"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home"/>
+        <item
+            android:id="@+id/idItem6"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home"/>
+        <item
+            android:id="@+id/idItem7"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home"/>
+    </group>
+
+</menu>
